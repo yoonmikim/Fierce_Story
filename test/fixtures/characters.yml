@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  gender: MyString
+  pronoun_one: MyString
+  pronoun_two: MyString
+  pronoun_three: MyString
+  pronoun_four: MyString
+  adjective: MyString
+  character_description_one: MyString
+  character_description_two: MyString
+
+two:
+  name: MyString
+  gender: MyString
+  pronoun_one: MyString
+  pronoun_two: MyString
+  pronoun_three: MyString
+  pronoun_four: MyString
+  adjective: MyString
+  character_description_one: MyString
+  character_description_two: MyString
