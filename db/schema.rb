@@ -34,18 +34,18 @@ ActiveRecord::Schema.define(version: 2019_05_07_142947) do
     t.string "title"
     t.string "content"
     t.string "issue"
-    t.integer "character_id"
     t.string "author"
     t.string "url"
+    t.integer "character_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "story_books", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "story_id"
     t.string "tag"
     t.string "comment"
+    t.integer "user_id"
+    t.integer "story_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
