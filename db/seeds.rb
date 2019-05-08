@@ -66,6 +66,6 @@ If the Queen liked a dish, Yes was called and it would be included in the night'
 Pretty soon this started catching on around the Queendom, for if a queen does something, the rest of the Queendom follows. If the villagers didn't want a second scoop of potatoes, they would say 'No.' And if they liked what someone was offering, they would say, 'Yes.' @@
 Soon, everyone realized that No is as important as Yes. What a world would it be if we could not say 'no' to the things that bother us? For example, if your grandparents wanted to give you a chocolate muffin with onion and ketchup…! YUCK! No! There’s nothing bad about 'No'. It’s as fine as 'yes', just different. The truth is, we all need a 'no' from time to time.@@
 And ever since that day in a small village in a small Queendom, Yes has meant yes, and No has meant no.@@
-This small Queendom also happened to be the birthplace of Yes and No's cousins, Sorry, Please and Thanks, but that is another story for another time…@@", issue: "Consent", character_id: 1)
-story_book_one = StoryBook.create!(user_id:1, story_id:1)
+This small Queendom also happened to be the birthplace of Yes and No's cousins, Sorry, Please and Thanks, but that is another story for another time…@@", issue: "Consent")
+story_book_one = StoryBook.create!(user_id:1, story_id:1, character_id: 1)
 # User.all.first.story_books.first.story.character

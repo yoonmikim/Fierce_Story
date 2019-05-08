@@ -3,11 +3,6 @@
 
 <%= form_for @story_book do |f| %>
 
-t.string "tag"
-t.string "comment"
-t.integer "user_id"
-t.integer "story_id"
-
 <%= f.label :tag %>
 <%= f.text_field :tag %> <br>
 
@@ -15,10 +10,11 @@ t.integer "story_id"
 <%= f.text_field :comment %><br>
 
 <%= f.label :story_id %>
-<%= f.collection_select :pronoun_one_id, PronounOne.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
+<%= f.collection_select :story_id, Story.order(:title).all, :id, :title, :prompt => '~please select~' %><br>
 
-<%= f.label :pronoun_two_id %>
-<%= f.collection_select :story_id, Story.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
+<%= f.label :character_id %>:
+<%= @character.name %><br>
+<%= f.hidden_field :character_id, value: @character.id %>
 
 <%= f.submit %><br>
 

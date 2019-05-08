@@ -6,7 +6,6 @@ class CreateStories < ActiveRecord::Migration[5.2]
       t.string :issue
       t.string :author
       t.string :url
-      t.integer :character_id
 
       t.timestamps
     end

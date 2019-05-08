@@ -6,6 +6,7 @@ class StoryBooksController < ApplicationController
   end
 
   def new
+    @character = Character.find(params[:character])
     @story_book = StoryBook.new
   end
 
@@ -16,9 +17,10 @@ class StoryBooksController < ApplicationController
       return
     end
 
-    @story_book = StoryBook.create(stroy_id: params[:story_id], user_id: session[:user_id])
+    @story_book = StoryBook.new(story_params)
+    @story_book.user_id = session[:user_id]
+    @story_book.save
     redirect_to story_books_path
-
   end
 
   def update
@@ -45,6 +47,6 @@ class StoryBooksController < ApplicationController
   end
 
   def story_params
-    params.require(:story_book).permit(:user_id, :story_id, :tag, :comment)
+    params.require(:story_book).permit(:user_id, :story_id, :character_id, :tag, :comment)
   end
 end
