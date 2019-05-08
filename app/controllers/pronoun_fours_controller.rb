@@ -1,0 +1,2 @@
+class PronounFoursController < ApplicationController
+end
