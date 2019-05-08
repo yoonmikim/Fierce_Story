@@ -35,7 +35,7 @@ class StoryBooksController < ApplicationController
     if @story_book.user_id == @logged_in_user_id
       @story_book.destroy
     end
-    redirect_to stroy_books_path
+    redirect_to story_books_path
   end
 
   private

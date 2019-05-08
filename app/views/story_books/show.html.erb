@@ -1,0 +1,13 @@
+<h1><%= @logged_in_user.story_books.last.story.title %></h1>
+
+<% @logged_in_user.story_books.last.ready_story.each do |p|%>
+  <p><%=p%> </p>
+   <% end %>
+<br>
+
+
+
+--------------------------------------------------------------------- <br>
+This is a revised version of the story <%= @logged_in_user.story_books.last.story.title %>
+<p>Author: <%= @logged_in_user.story_books.last.story.author %> </p>
+<p><%= link_to "Read the story here", @logged_in_user.story_books.last.story.url %> </p>

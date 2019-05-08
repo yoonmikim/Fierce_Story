@@ -1,10 +1,38 @@
+<%= form_for @character do |f| %>
 
-race = [“Asian”, “biracial”, “black”, “Hispanic”, “Latino”, “native American”, “white”]
-gender = [“boy”, “gender non-conforming person”, “girl”, “non-binary person”, “transboy”, “transgirl”]
-pronoun_one = [“he”, “she”, “ze”, “they”]
-pronoun_two = [“he”, “she”, “they”, “ze”]
-pronoun_three = [“her”, “hirs”, “his”, “their”, “zirs”]
-pronoun_four = [“her”, “him”, “them”, “zir”]
-adjective = [“brave”, “feminist”, “friendly”, “happy”, “kind”, “sad”, “sensitive”, “smart”, “strong”]
-character_description_one = [“appreciated nature”, “enjoyed playing games”, “loved reading books”, “was interested in astronomy”]
-character_description_ two = [“a person on the autism spectrum”, “a person with visual disability”, “a wheelchair user”, “able-bodied”]
+<%= f.label :name %>
+<%= f.text_field :name %> <br>
+
+<%= f.label :gender_id %>
+<%= f.collection_select :gender_id, Gender.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
+
+<%= f.label :pronoun_one_id %>
+<%= f.collection_select :pronoun_one_id, PronounOne.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
+
+<%= f.label :pronoun_two_id %>
+<%= f.collection_select :pronoun_two_id, PronounTwo.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
+
+<%= f.label :pronoun_three_id %>
+<%= f.collection_select :pronoun_three_id, PronounThree.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
+
+<%= f.label :pronoun_four_id %>
+<%= f.collection_select :pronoun_four_id, PronounFour.order(:name).all,:id, :name, :prompt => '~please select~' %><br>
+
+<%= f.label :race_id %>
+<%= f.collection_select :race_id, Race.order(:name).all,:id, :name, :prompt => '~please select~' %><br>
+
+<%= f.label :ethnicity_id %>
+<%= f.collection_select :ethnicity_id, Ethnicity.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
+
+<%= f.label :adjective %>
+<%= f.select :adjective, Character::ADJECTIVES, :prompt => '~please select~' %><br>
+
+<%= f.label :character_description_one %>
+<%= f.select :character_description_one, Character::CHARACTER_DESCRIPTION_ONE, :prompt => '~please select~' %><br>
+
+<%= f.label :character_description_two %>
+<%= f.select :character_description_two, Character::CHARACTER_DESCRIPTION_TWO, :prompt => '~please select~' %><br>
+
+<%= f.submit %><br>
+
+<% end %>
