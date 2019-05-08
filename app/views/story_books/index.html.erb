@@ -1,21 +1,21 @@
-hi
 <%= link_to "Story Book Index Page", story_books_path %> <br>
 <br><br>
 
-<h1>All Story Books Index Page!</h1>
+<h1>Welcome!</h1>
+<p>Hi <%= @logged_in_user.name %>! Welcome to Story Book :)</p>
+<h2> Here is your list of stories: </h2>
 
 <ul>
-  <% @story_books.each do |story_book| %>
-    <li> Hi <%= story_book.user.name %>! Welcome to Story Book :) </li>
-    <li> Here is your list of stories: <%= link_to story_book.story.title, story_book.story %></li>
+  <% @logged_in_user.story_books.each do |story_book| %>
+    <li> <%= link_to story_book.story.title %></li>
     <br><br>
   <% end %>
 </ul>
 
-<%= link_to "Create a new Story Book!", new_story_book_path %>
+<%= link_to "Create a new Story!", new_story_book_path %>
 
 <ul>
-<% @story_books.each do |story_book| %>
+<% @logged_in_user.story_books.each do |story_book| %>
   <li>
     <%= story_book.user.username %> story book for this story #<%= story_book.story.title %>
     <% if @logged_in_user_id == story_book.user_id %>
