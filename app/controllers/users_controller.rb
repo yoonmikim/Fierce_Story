@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :get_user, only: [:show, :edit, :update]
-  before_action :require_login
-  skip_before_action :require_login, only: [:index]
+  # before_action :require_login
+  # skip_before_action :require_login, only: [:index]
 
   def index
     @users = User.all
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
       if @user.valid?
         log_in_user(@user.id)
-        redirect_to stories_path
+        redirect_to story_books_path
       else
         @errors = @user.errors.full_messages
         render :new
