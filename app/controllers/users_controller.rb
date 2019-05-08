@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
       if @user.valid?
         log_in_user(@user.id)
-        redirect_to stories_path
+        redirect_to story_books_path
       else
         @errors = @user.errors.full_messages
         render :new
