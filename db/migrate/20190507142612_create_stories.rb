@@ -4,9 +4,9 @@ class CreateStories < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :content
       t.string :issue
-      t.belongs_to :character, foreign_key: true
       t.string :author
       t.string :url
+      t.integer :character_id
 
       t.timestamps
     end
