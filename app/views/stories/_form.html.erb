@@ -1,0 +1,17 @@
+<h1>Story Form</h1>
+
+
+    <% @story.errors.full_messages.each do |msg| %>
+      <li>
+        <%= msg %>
+      </li>
+    <% end %>
+
+
+<%= form_for @story do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.submit %>
+
+<% end %>

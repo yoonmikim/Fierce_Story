@@ -1,0 +1,13 @@
+<%= link_to "Story Book Index Page", story_books_path %> <br>
+<br><br>
+<h1>Story Show Page</h1>
+<p> this is story of <%= @story.name %> </p>
+<ul>
+  <% @story.characters.each do |character| %>
+    <li><%= link_to character.name, character %></li>
+  <% end %>
+</ul>
+
+<br><br>
+<%= link_to "Edit this Story", edit_story_path(@story) %> <br>
+<%= button_to "Delete this Story", storys_path(@story), method: :delete %>

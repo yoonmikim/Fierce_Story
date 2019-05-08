@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :story_books
-  # has_many :stories, through :story_books
+  has_many :stories, through: :story_books
   has_secure_password
 
   validates :name, presence: true, length: {maximum: 40}
