@@ -11,6 +11,66 @@ class ApplicationController < ActionController::Base
     flash["message"] = message
   end
 
+def moon
+  cookies[:moon] = {
+    value: 'dark mode on'
+  }
+  if @logged_in_user
+    redirect_to story_books_path
+  else
+    redirect_to welcome_index_path
+  end
+end
+
+def sun
+  cookies.delete(:moon)
+  if @logged_in_user
+    redirect_to story_books_path
+  else
+    redirect_to welcome_index_path
+  end
+end
+
+def bigletters
+  cookies[:bigletters] = {
+    value: 'increased-letter-size'
+  }
+  if @logged_in_user
+    redirect_to story_books_path
+  else
+    redirect_to welcome_index_path
+  end
+end
+
+def standardletters
+  cookies.delete(:bigletters)
+  if @logged_in_user
+    redirect_to story_books_path
+  else
+    redirect_to welcome_index_path
+  end
+end
+
+def broadmargins
+  cookies[:broadmargins] = {
+    value: 'increased-margins'
+  }
+  if @logged_in_user
+    redirect_to story_books_path
+  else
+    redirect_to welcome_index_path
+  end
+end
+
+def standardmargins
+  cookies.delete(:broadmargins)
+  if @logged_in_user
+    redirect_to story_books_path
+  else
+    redirect_to welcome_index_path
+  end
+end
+
   private
 
   def log_in_user(user_id)
@@ -30,6 +90,5 @@ class ApplicationController < ActionController::Base
     end
     @notification = get_notification
   end
-
 
 end
