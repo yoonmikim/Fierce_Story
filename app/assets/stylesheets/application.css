@@ -8,180 +8,57 @@
   src: url('/assets/Valentina-Regular.otf');
 }
 
-.welcome {
-  font-family: 'Cupertino';
+
+#welcome {
   text-align: left;
   text-decoration: none;
   font-style: normal;
 }
 
-
-body {
-  font-family: 'Valentina-Regular';
-  font-style: normal;
-}
-
-h1 {
+#welcome h1 {
   font-family: 'Cupertino';
-  font-style: normal;
-  text-size: 100px;
-}
-
-/* ul {
-
-    list-style-type: none;
-    padding: 25px;
-    overflow: hidden;
-
-}
-
-a {
+  text-align: left;
   text-decoration: none;
-  color: pink;
+  font-style: normal;
+  color: #EB3E37;
+  font-size: 150pt;
+}
+
+a:link {
   font-family: 'Valentina-Regular';
-
+  text-align: left;
+  text-decoration: none;
+  font-style: normal;
+  color: #0E2B3F;
+  font-size: 20pt;
+  border: 2px black solid;
+  background-color: lightgreen;
+  padding: 14px 25px;
+  text-align: center;
+  display: inline-block;
 }
 
-i {
-  padding: 5px;
-}
-
-li {
-  display: block;
-  padding: 10px 10px;
-  float: right;
-  color: black;
+a:visited {
   font-family: 'Valentina-Regular';
-  background-color: rgba(255, 255, 255, 0.8);
-
+  text-decoration: none;
+  color: #58B99D;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Advent+Pro:100);
-
-html {
-  /* background:  url(https://i.pinimg.com/originals/25/b4/22/25b422f0a9dbbe5373d0ab13affa6a35.gif) no-repeat center center fixed; */
-  background-size: cover;
+a:hover {
+  color: #EB3E37;
+  text-decoration: underline;
 }
 
-body {
-    height: 100%;
+a:active {
+  color: blue;
+  text-decoration: underline;
 }
 
-.login {
-  padding-top: 10px;
-
-}
-
-.functional-button {
-background :purple;
-margin: 50px;
-display: inline;
-padding: 20px;
-color: white;
-border-radius: 20px; <<- rounded courners
-box-shadow: 0 0 0 red;
-}
-
-.dropdown:hover
-
-.dropdown-content {
-  display: block;
-}
-
-
-.create-post {
-  line-height: 200%;
-
-}
-
-.create-post-form {
-
-
-}
-
-.form-label {
-
-}
-
-.text-field {
-
-}
-
-.file-field {
-  padding-left: 75px;
-
-
-}
-
-.submit-button {
-
-
-}
-
-
-.user-profile {
-  margin: 0 auto;
-  // border-style: solid;
-  // border-color: green;
-  width: 70%;
-    line-height: 20%;
-
-    }
-
-.user_post_image {
-  height: 300px;
-  width: 300px;
-}
-
-// .user-post-flex-container {
-//   display: flex;
-// }
-
-.usersPics {
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  // width: 70%;
-  margin: 0 auto;
-  grid-column-gap: 15px;
-  grid-row-gap: 15px;
-  align-content: flex-start;
-} */
-
-/* #signup {
+#welcome p {
   font-family: 'Valentina-Regular';
-  font-size: 13px;
-} */
-
-/* @import url(https://fonts.googleapis.com/css?family=Advent+Pro:100); */
-/*
-.all-posts {
-  // border-style: solid;
-  // border-color: blue;
-  width: 22%;
-  margin: 0 auto;
-}
-
-.user_post_image {
-  height: 300px;
-  width: 300px;
-}
-
-.username {
-  font-size: 2em;
   text-align: left;
+  text-decoration: none;
+  font-style: normal;
+  color: #0E2B3F;
+  font-size: 20pt;
 }
-
-.post-title {
-  text-align: left;
-
-}
-
-.create-date {
-  text-align: left;
-}
-
-.hashtags {
-  text-align: left;
-  line-height: 60%
-} */

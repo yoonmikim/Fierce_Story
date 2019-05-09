@@ -29,15 +29,15 @@
       <% end %>
 
       <% if cookies[:bigletters] %>
-      <%= button_to '🔡 standard text size 🔡 ', standardletters_path, method: :get, class: 'header-button' %>
+      <%= button_to '🔡 Standard Text Size 🔡 ', standardletters_path, method: :get, class: 'header-button' %>
       <% else %>
-      <%= button_to '🔠 INCREASE TEXT SIZE 🔠', bigletters_path, method: :get, class: 'header-button' %>
+      <%= button_to '🔠 Increase Text Size 🔠', bigletters_path, method: :get, class: 'header-button' %>
       <% end %>
 
       <% if cookies[:broadmargins] %>
-      <%= button_to '🆗 standard margins 🆗 ', standardmargins_path, method: :get, class: 'header-button' %>
+      <%= button_to '🆗 Standard Margins 🆗 ', standardmargins_path, method: :get, class: 'header-button' %>
       <% else %>
-      <%= button_to '↕️ INCREASE MARGINS ↕️', broadmargins_path, method: :get, class: 'header-button' %>
+      <%= button_to '↕️ Increase Margins ↕️', broadmargins_path, method: :get, class: 'header-button' %>
       <% end %> <br>
 
     </header>
