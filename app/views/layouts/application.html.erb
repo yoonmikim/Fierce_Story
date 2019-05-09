@@ -21,6 +21,7 @@
           <%= @notification %>
         </p>
       <% end %>
+      <%= link_to "Create a new story!", new_character_path %>
 
       <% if cookies[:moon] %>
       <%= button_to '🌞 Light Mode 🌞 ', sun_path, method: :get, class: 'header-button' %>

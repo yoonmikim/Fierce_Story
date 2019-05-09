@@ -1,9 +1,15 @@
-<%= link_to "Not a member yet?", new_user_path %>
-<br><br>
+<div id="welcome">
+<h2>Welcome back!</h2><br>
+</div>
+
+<div id="standard_page">
 <%= form_tag login_index_path do %>
       <%= label_tag :username, "Your username:" %>
       <%= text_field_tag :username %> <br>
       <%= label_tag :password, "Your password:"%>
       <%= password_field_tag :password %><br><br>
-  <%= submit_tag "Log in!" %>
+  <%= submit_tag "Log in!", class: "hi", :style => "color: #0E2B3F; font-size: 20pt; border: 2px solid; background-color: lightgreen; padding: 15px 20px; border-radius: 20px;"%>
 <% end %>
+<br>
+<%= link_to "Not a member yet?", new_user_path %>
+</div>

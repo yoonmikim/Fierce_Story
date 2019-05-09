@@ -1,4 +1,6 @@
-<h1>First, let's create a new character:</h1>
+<div id="form">
+<h1>First, let's talk about your character:</h1>
+<br><br>
 
 <% if @errors && @errors.any? %>
 <ul class="errors">
@@ -45,6 +47,7 @@
 <%= f.label :character_description_two %>
 <%= f.select :character_description_two, Character::CHARACTER_DESCRIPTION_TWO, :prompt => '~please select~' %><br><br>
 
-<%= f.submit 'My character is ready!'%><br>
+<%= f.submit 'My character is ready!', :style => "color: #0E2B3F; font-size: 20pt; border: 2px solid; background-color: lightgreen; padding: 15px 20px; border-radius: 20px;"%><br>
 
 <% end %>
+</div>

@@ -1,4 +1,5 @@
 <br><br>
+<div id="form">
 
 <h1>Now, story time!</h1>
 
@@ -14,8 +15,7 @@
 
 <%= form_for @story_book do |f| %>
 
-<%= f.label :character_id %>'s name:
-<%= @character.name.titleize %><br>
+<p><%= f.label :character_id, :style => "display: inline" %>'s name: <font color=#EB3E37><strong><%= @character.name.titleize %></strong></font><br></p>
 <%= f.hidden_field :character_id, value: @character.id %>
 
 <%= f.label :story_id, "Main issue:" %>
@@ -24,9 +24,11 @@
 <%= f.label :tag, "How would you like to entitle your story?" %>
 <%= f.text_field :tag %> <br>
 
-<%= f.label :comment %> (just for yourself):
+<p><%= f.label :comment, :style => "display: inline" %> (just for yourself):</p>
 <%= f.text_field :comment %><br><br>
 
-<%= f.submit 'Read your story!'%><br>
+<%= f.submit 'Read your story!', :style => "color: #0E2B3F; font-size: 20pt; border: 2px solid; background-color: lightgreen; padding: 15px 20px; border-radius: 20px;"%><br>
 
 <% end %>
+
+</div>

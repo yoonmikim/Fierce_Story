@@ -1,4 +1,6 @@
-<h1>Welcome to Fierce Stories</h1>
+<div id="form">
+
+<h2>Welcome to Fierce Stories</h2>
 
 <% if @errors && @errors.any? %>
 <ul class="errors">
@@ -30,3 +32,6 @@
 <%= f.submit 'Sign in' %><br>
 
 <% end %>
+
+<%= link_to "Already a member?", new_login_path %>
+</div>

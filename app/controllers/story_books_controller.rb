@@ -19,7 +19,7 @@ class StoryBooksController < ApplicationController
     @story_book = StoryBook.new(story_params)
     @story_book.user_id = session[:user_id]
     @story_book.save
-    redirect_to story_books_path
+    redirect_to @story_book
   end
 
   def update

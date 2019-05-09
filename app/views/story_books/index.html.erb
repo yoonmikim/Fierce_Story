@@ -1,3 +1,4 @@
+<div id="homepage">
 Hello, <%= @logged_in_user.username.titleize %>! <br>
 <%= button_to "Log out", log_out_path, method: :delete %>
 <br>
@@ -9,25 +10,24 @@ Hello, <%= @logged_in_user.username.titleize %>! <br>
 <% if @logged_in_user.story_books.first == nil %>
 <p>You haven't created any story yet. Time to change that!</p>
 <% else %>
-<h2> Here is the list of your stories: </h2>
+<h2> Here is the list of your stories: </h2><br>
 
 <ul>
   <% @logged_in_user.story_books.each do |story_book| %>
     <li>
       <%= link_to story_book.tag.titleize, story_book%> featuring <%=story_book.character.name.titleize %>, a <%=story_book.character.adjective %> <%=story_book.character.gender.name %> who <%=story_book.character.character_description_one %>
-      <%= button_to "Edit the character", edit_character_path(story_book.character_id), :method => :get %>
-      <%= button_to "Delete this story", story_book_path(story_book), method: :delete, :data => {:confirm => 'Are you sure you want to delete this story?'} %>
+      <%= button_to "Edit the character", edit_character_path(story_book.character_id), :method => :get, :style => "color: #0E2B3F; font-size: 10pt; border: 2px solid; background-color: #25c2c0; padding: 5px 10px; display: inline; border-radius: 20px;" %>
+      <%= button_to "Delete this story", story_book_path(story_book), method: :delete, :data => {:confirm => 'Are you sure you want to delete this story?'}, :style => "color: #0E2B3F; font-size: 10pt; border: 2px solid;   display: inline; background-color: #25c2c0; padding: 5px 10px; border-radius: 20px;" %>
     </li>
     <br>
   <% end %>
 </ul>
 <% end %>
 
-<%= link_to "Create a new story!", new_character_path %>
-
-<h2>Check out stories by others:</h2>
+<h2>Check out stories by others:</h2><br>
 <ul>
 <% StoryBook.all.each do |story_book|%>
 <li> <%= link_to story_book.tag.titleize, story_book%>, a story about <%=story_book.story.issue.upcase %></li><br>
 <% end %>
 </ul>
+</div>
