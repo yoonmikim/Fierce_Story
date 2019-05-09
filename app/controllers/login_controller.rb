@@ -17,7 +17,7 @@ class LoginController < ApplicationController
 
   def destroy
     log_out_user
-    redirect_to story_books_path
+    redirect_to welcome_index_path
   end
 
 end

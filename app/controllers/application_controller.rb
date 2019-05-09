@@ -31,4 +31,5 @@ class ApplicationController < ActionController::Base
     @notification = get_notification
   end
 
+
 end

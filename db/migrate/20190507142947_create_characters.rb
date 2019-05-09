@@ -11,6 +11,7 @@ class CreateCharacters < ActiveRecord::Migration[5.2]
       t.string :adjective
       t.string :character_description_one
       t.string :character_description_two
+      t.integer :ethnicity_id
 
       t.timestamps
     end

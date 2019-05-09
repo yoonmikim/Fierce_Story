@@ -1,0 +1,2 @@
+class PronounOnesController < ApplicationController
+end

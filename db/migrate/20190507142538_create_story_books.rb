@@ -5,6 +5,7 @@ class CreateStoryBooks < ActiveRecord::Migration[5.2]
       t.string :comment
       t.integer :user_id
       t.integer :story_id
+      t.integer :character_id
 
       t.timestamps
     end

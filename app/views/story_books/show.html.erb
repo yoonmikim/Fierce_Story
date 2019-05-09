@@ -1,0 +1,12 @@
+⬅️ <%= link_to "Go back", story_books_path %>
+
+<h1><%= @story_book.tag.titleize %></h1>
+
+<% @story_book.ready_story.each do |p|%>
+  <p><%=p%> </p>
+   <% end %>
+<br>
+
+<!-- .split(". ").map(&:capitalize).join(". ") -->
+--------------------------------------------------------------------- <br>
+This is a "revised" inclusive version of "<%= @logged_in_user.story_books.last.story.title %>" by <%= @logged_in_user.story_books.last.story.author %> (<%= link_to "Read the original story", @logged_in_user.story_books.last.story.url %>)

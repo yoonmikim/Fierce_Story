@@ -1,0 +1,2 @@
+class ReligionsController < ApplicationController
+end

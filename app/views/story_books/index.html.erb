@@ -1,26 +1,33 @@
+Hello, <%= @logged_in_user.username.titleize %>! <br>
+<%= button_to "Log out", log_out_path, method: :delete %>
+<br>
+<hr>
+<br>
+<h1>Ready for an adventure?</h1>
+<br>
 
-<%= link_to "Story Book Index Page", story_books_path %> <br>
-<br><br>
-
-<h1>All Story Books Index Page!</h1>
+<% if @logged_in_user.story_books.first == nil %>
+<p>You haven't created any story yet. Time to change that!</p>
+<% else %>
+<h2> Here is the list of your stories: </h2>
 
 <ul>
-  <% @story_books.each do |story_book| %>
-    <li> Hi <%= story_book.user.name %>! Welcome to Story Book :) </li>
-    <li> Here is your list of stories: <%= link_to story_book.story.title, story_book.story %></li>
-    <br><br>
+  <% @logged_in_user.story_books.each do |story_book| %>
+    <li>
+      <%= link_to story_book.tag.titleize, story_book%> featuring <%=story_book.character.name.titleize %>, a <%=story_book.character.adjective %> <%=story_book.character.gender.name %> who <%=story_book.character.character_description_one %>
+      <%= button_to "Edit the character", edit_character_path(story_book.character_id), :method => :get %>
+      <%= button_to "Delete this story", story_book_path(story_book), method: :delete, :data => {:confirm => 'Are you sure you want to delete this story?'} %>
+    </li>
+    <br>
   <% end %>
 </ul>
+<% end %>
 
-<%= link_to "Create a new Story Book!", new_story_book_path %>
+<%= link_to "Create a new story!", new_character_path %>
 
+<h2>Check out stories by others:</h2>
 <ul>
-<% @story_books.each do |story_book| %>
-  <li>
-    <%= story_book.user.username %> story book for this story #<%= story_book.story.title %>
-    <% if @logged_in_user_id == story_book.user_id %>
-    <%= button_to "delete story_book", story_book_path(story_book), method: :delete %>
-    <% end %>
-  </li>
+<% StoryBook.all.each do |story_book|%>
+<li> <%= link_to story_book.tag.titleize, story_book%>, a story about <%=story_book.story.issue.upcase %></li><br>
 <% end %>
 </ul>
