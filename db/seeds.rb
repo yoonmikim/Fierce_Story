@@ -15,6 +15,9 @@ Race.create(name: "Native American")
 Race.create(name: "White")
 
 Ethnicity.create(name: "Arab")
+Ethnicity.create(name: "Jewish")
+Ethnicity.create(name: "Asian")
+Ethnicity.create(name: "Slavic")
 
 Gender.create(name: "boy")
 Gender.create(name: "gender non-conforming person")
@@ -48,7 +51,7 @@ PronounFour.create(name: "zir")
 #
 #
 user1 = User.create!(name: "SYLWIA", username: "sylwia", password: "sylwia", email: "sylwia@gmail.com")
-user1 = User.create!(name: "Joel", username: "joel", password: "joel", email: "jo@gmail.com")
+user1 = User.create!(name: "Joel", username: "joel", password: "joel889", email: "jo@gmail.com")
 
 char = Character.create!(name: "Bo", gender_id: 3, adjective: "feminist", character_description_one: "appreciated nature", character_description_two: "a wheelchair user", pronoun_one_id: 2, pronoun_two_id: 2, pronoun_three_id: 1, pronoun_four_id: 1, race_id: 1, ethnicity_id: 1)
 char2 = Character.create!(name: "Fanny", gender_id: 6, race_id: 5, pronoun_one_id: 2, pronoun_two_id: 2, pronoun_three_id: 1, pronoun_four_id: 1, adjective: "happy", character_description_one: "was interested in astronomy", character_description_two: "a person with visual disability", ethnicity_id: 1)

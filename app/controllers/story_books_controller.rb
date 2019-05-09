@@ -16,7 +16,6 @@ class StoryBooksController < ApplicationController
       redirect_to new_login_path
       return
     end
-
     @story_book = StoryBook.new(story_params)
     @story_book.user_id = session[:user_id]
     @story_book.save
