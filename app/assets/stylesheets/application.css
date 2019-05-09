@@ -8,8 +8,9 @@
   src: url('/assets/Valentina-Regular.otf');
 }
 
-
 #welcome {
+  width: 90%;
+  margin: 0 auto;
   text-align: left;
   text-decoration: none;
   font-style: normal;
@@ -52,37 +53,48 @@
     font-size: 60pt;
 }
 
-#welcome a:link {
-  font-family: 'Valentina-Regular';
+#welcome a {
+    font-family: 'Cupertino';
+    text-align: center;
+    text-decoration: none;
+    font-style: normal;
+    color: #0E2B3F;
+    font-size: 20pt;
+    background-color: lightgreen;
+    padding: 7px 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 20px;
+    }
+
+#welcome a:visited {
+  font-family: 'Cupertino';
   text-align: center;
   text-decoration: none;
   font-style: normal;
   color: #0E2B3F;
   font-size: 20pt;
-  border: 2px black solid;
   background-color: lightgreen;
-  padding: 14px 25px;
+  padding: 7px 12px;
   text-align: center;
   display: inline-block;
   border-radius: 20px;
-}
-
-#welcome a:visited {
-  font-family: 'Valentina-Regular';
-  text-decoration: none;
-  color: #58B99D;
-}
+    }
 
 #welcome a:hover {
-  color: #EB3E37;
-  text-decoration: underline;
+color: #EB3E37;
+text-decoration: underline;
 }
 
 #welcome a:active {
-  color: blue;
-  text-decoration: underline;
+color: blue;
+text-decoration: underline;
 }
 
+#standard_page {
+  width: 90%;
+  margin: 0 auto;
+}
 
 #standard_page h1 {
     display: block;
@@ -163,6 +175,11 @@
 #standard_page a:active {
   color: blue;
   text-decoration: underline;
+}
+
+#homepage {
+  width: 90%;
+  margin: 0 auto;
 }
 
 #homepage h1 {
@@ -389,7 +406,7 @@
       margin-inline-start: 0px;
       margin-inline-end: 0px;
       font-weight: bold;
-      
+      color: #EB3E37;
       font-size: 60pt;
 }
 
@@ -400,17 +417,20 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px; */
     font-weight: none;
-    color: #25c2c0;
+    color: #0E2B3F;
     font-size: 20pt;
 }
 
 #form li {
+    background: #B0D8C3;
     display: block;
+    width: 45%;
     /* margin-block-start: 0.4em;
     margin-block-end: 0.4em; */
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: none;
+    color: #0E2B3F;
     font-size: 20pt;
 }
 
@@ -421,7 +441,7 @@
     margin-block-end: 0.4em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-        color: #25c2c0;
+        color: #0E2B3F;
     font-size: 20pt;
 }
 
@@ -472,6 +492,122 @@
 }
 
 #form a:active {
+  color: blue;
+  text-decoration: underline;
+}
+
+#header input {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 20pt;
+}
+
+
+#header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+#header h1 {
+    font-family: 'Cupertino';
+    text-align: left;
+    text-decoration: none;
+    font-style: normal;
+    color: #EB3E37;
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 110pt;
+}
+
+#header h2 {
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: none;
+    font-size: 30pt;
+}
+
+#header p {
+    display: block;
+    /* margin-block-start: 0.4em;
+    margin-block-end: 0.4em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+#header li {
+    display: block;
+    /* margin-block-start: 0.4em;
+    margin-block-end: 0.4em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: none;
+    font-size: 20pt;
+}
+
+#header label {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 20pt;
+}
+
+#header input {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 20pt;
+}
+
+#header a:link {
+  font-family: 'Cupertino';
+  text-align: center;
+  text-decoration: none;
+  font-style: normal;
+  color: #0E2B3F;
+  font-size: 20pt;
+  background-color: lightgreen;
+  padding: 7px 12px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+
+
+#header a:visited {
+  font-family: 'Cupertino';
+  text-decoration: none;
+  color: #0E2B3F;
+}
+
+#header a:hover {
+  color: #EB3E37;
+  text-decoration: underline;
+}
+
+#header a:active {
   color: blue;
   text-decoration: underline;
 }

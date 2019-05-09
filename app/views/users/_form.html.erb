@@ -2,34 +2,37 @@
 
 <h2>Welcome to Fierce Stories</h2>
 
-<% if @errors && @errors.any? %>
-<ul class="errors">
+
+  <% if @errors && @errors.any? %>
+<ul class="errors"> <p>
+  <strong>Oh-oh! Fix these errors to move on:</strong>
+  </p>
   <% @errors.each do |error| %>
   <li>
     <%= error %>
   </li>
   <% end %>
 </ul>
-<% end %>
+<% end %> <br>
 
 <%= form_for @user do |f| %>
 
 <%= f.label :username %>
-<%= f.text_field :username %> <br>
+<%= f.text_field :username %>
 
 <%= f.label :name %>
-<%= f.text_field :name %><br>
+<%= f.text_field :name %>
 
 <%= f.label :password %>
-<%= f.password_field :password %><br>
+<%= f.password_field :password %>
 
-<%= f.label :password_confirmation %><br>
-<%= f.password_field :password_confirmation %><br>
+<%= f.label :password_confirmation %>
+<%= f.password_field :password_confirmation %>
 
 <%= f.label :email %>
 <%= f.text_field :email %><br>
 
-<%= f.submit 'Sign in' %><br>
+<%= f.submit 'Sign in', :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px;" %><br>
 
 <% end %>
 

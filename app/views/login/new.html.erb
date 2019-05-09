@@ -2,14 +2,30 @@
 <h2>Welcome back!</h2><br>
 </div>
 
+<div id="form">
+<% if @errors && @errors.any? %>
+<ul class="errors"> <p>
+<strong>Oh-oh! Fix these errors to move on:</strong>
+</p>
+<% @errors.each do |error| %>
+<li>
+  <%= error %>
+</li>
+<% end %>
+</ul>
+<% end %> <br>
+</div>
+
 <div id="standard_page">
 <%= form_tag login_index_path do %>
       <%= label_tag :username, "Your username:" %>
       <%= text_field_tag :username %> <br>
       <%= label_tag :password, "Your password:"%>
       <%= password_field_tag :password %><br><br>
-  <%= submit_tag "Log in!", class: "hi", :style => "color: #0E2B3F; font-size: 20pt; border: 2px solid; background-color: lightgreen; padding: 15px 20px; border-radius: 20px;"%>
+  <%= submit_tag "Log in!", class: "hi", :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px;"%>
 <% end %>
 <br>
+</div>
+<div id="welcome">
 <%= link_to "Not a member yet?", new_user_path %>
 </div>

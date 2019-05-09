@@ -4,14 +4,16 @@
 <h1>Now, story time!</h1>
 
 <% if @errors && @errors.any? %>
-<ul class="errors">
-  <% @errors.each do |error| %>
-  <li>
-    <%= error %>
-  </li>
-  <% end %>
-</ul>
+<ul class="errors"> <p>
+<strong>Oh-oh! Fix these errors to move on:</strong>
+</p>
+<% @errors.each do |error| %>
+<li>
+  <%= error %>
+</li>
 <% end %>
+</ul>
+<% end %> <br>
 
 <%= form_for @story_book do |f| %>
 
