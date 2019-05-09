@@ -1,3 +1,15 @@
+<h1>First, let's create a new character:</h1>
+
+<% if @errors && @errors.any? %>
+<ul class="errors">
+  <% @errors.each do |error| %>
+  <li>
+    <%= error %>
+  </li>
+  <% end %>
+</ul>
+<% end %>
+
 <%= form_for @character do |f| %>
 
 <%= f.label :name %>
@@ -31,8 +43,8 @@
 <%= f.select :character_description_one, Character::CHARACTER_DESCRIPTION_ONE, :prompt => '~please select~' %><br>
 
 <%= f.label :character_description_two %>
-<%= f.select :character_description_two, Character::CHARACTER_DESCRIPTION_TWO, :prompt => '~please select~' %><br>
+<%= f.select :character_description_two, Character::CHARACTER_DESCRIPTION_TWO, :prompt => '~please select~' %><br><br>
 
-<%= f.submit %><br>
+<%= f.submit 'My character is ready!'%><br>
 
 <% end %>

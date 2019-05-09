@@ -20,9 +20,10 @@ class CharactersController < ApplicationController
   end
 
   def update
-    if @character = Character.update(character_params)
+    @character = Character.find(params[:id])
+    if @character.update(character_params)
       @character.save
-      redirect_to new_story_book_path
+      redirect_to story_book_path
     else
       render :edit
     end

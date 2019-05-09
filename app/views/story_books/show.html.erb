@@ -1,13 +1,11 @@
-<h1><%= @logged_in_user.story_books.last.story.title %></h1>
+⬅️ <%= link_to "Go back", story_books_path %>
 
-<% @logged_in_user.story_books.last.ready_story.each do |p|%>
+<h1><%= @story_book.tag.titleize %></h1>
+
+<% @story_book.ready_story.each do |p|%>
   <p><%=p%> </p>
    <% end %>
 <br>
 
-
-
 --------------------------------------------------------------------- <br>
-This is a revised version of the story <%= @logged_in_user.story_books.last.story.title %>
-<p>Author: <%= @logged_in_user.story_books.last.story.author %> </p>
-<p><%= link_to "Read the story here", @logged_in_user.story_books.last.story.url %> </p>
+This is a "revised" inclusive version of "<%= @logged_in_user.story_books.last.story.title %>" by <%= @logged_in_user.story_books.last.story.author %> (<%= link_to "Read the original story", @logged_in_user.story_books.last.story.url %>)

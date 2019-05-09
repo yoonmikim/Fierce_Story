@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :genders, only: [:new, :create]
   get 'welcome/index'
   root 'welcome#index'
-  resources :characters, only: [:new, :create]
+  resources :characters, only: [:new, :create, :edit, :update]
   # resources :stories
   resources :story_books
   resources :users

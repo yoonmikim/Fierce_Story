@@ -1,21 +1,33 @@
 <%= link_to "Story Book Index Page", story_books_path %> <br>
 <br><br>
 
+<h1>Now, story time!</h1>
+
+<% if @errors && @errors.any? %>
+<ul class="errors">
+  <% @errors.each do |error| %>
+  <li>
+    <%= error %>
+  </li>
+  <% end %>
+</ul>
+<% end %>
+
 <%= form_for @story_book do |f| %>
 
-<%= f.label :tag %>
-<%= f.text_field :tag %> <br>
-
-<%= f.label :comment %>
-<%= f.text_field :comment %><br>
-
-<%= f.label :story_id %>
-<%= f.collection_select :story_id, Story.order(:title).all, :id, :title, :prompt => '~please select~' %><br>
-
-<%= f.label :character_id %>:
-<%= @character.name %><br>
+<%= f.label :character_id %>'s name:
+<%= @character.name.titleize %><br>
 <%= f.hidden_field :character_id, value: @character.id %>
 
-<%= f.submit %><br>
+<%= f.label :story_id, "Main issue:" %>
+<%= f.collection_select :story_id, Story.order(:issue).all, :id, :issue, :prompt => '~select the main issue~' %><br>
+
+<%= f.label :tag, "How would you like to entitle your story?" %>
+<%= f.text_field :tag %> <br>
+
+<%= f.label :comment %> (just for yourself):
+<%= f.text_field :comment %><br><br>
+
+<%= f.submit 'Read your story!'%><br>
 
 <% end %>
