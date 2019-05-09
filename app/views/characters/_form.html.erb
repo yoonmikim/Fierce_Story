@@ -15,8 +15,8 @@
 <%= f.label :name %>
 <%= f.text_field :name %> <br>
 
-<%= f.label :gender_id %>
-<%= f.collection_select :gender_id, Gender.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
+<%= f.label :gender %>
+<%= f.collection_select :gender, Gender.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
 
 <%= f.label :pronoun_one_id %>
 <%= f.collection_select :pronoun_one_id, PronounOne.order(:name).all, :id, :name, :prompt => '~please select~' %><br>

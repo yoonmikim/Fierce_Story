@@ -1,3 +1,8 @@
+.welcome {
+  font-size: 150px;
+
+}
+
 @import "semantic-ui";
 
 @font-face {
