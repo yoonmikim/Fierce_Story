@@ -1,10 +1,45 @@
-
-race = [“Asian”, “biracial”, “black”, “Hispanic”, “Latino”, “native American”, “white”]
+<%# race = [“Asian”, “biracial”, “black”, “Hispanic”, “Latino”, “native American”, “white”]
 gender = [“boy”, “gender non-conforming person”, “girl”, “non-binary person”, “transboy”, “transgirl”]
 pronoun_one = [“he”, “she”, “ze”, “they”]
-pronoun_two = [“he”, “she”, “they”, “ze”]
+pronoun_two = [“himself”, “herself”, “themself”, “zimself”, "hirself"]
 pronoun_three = [“her”, “hirs”, “his”, “their”, “zirs”]
 pronoun_four = [“her”, “him”, “them”, “zir”]
 adjective = [“brave”, “feminist”, “friendly”, “happy”, “kind”, “sad”, “sensitive”, “smart”, “strong”]
 character_description_one = [“appreciated nature”, “enjoyed playing games”, “loved reading books”, “was interested in astronomy”]
-character_description_ two = [“a person on the autism spectrum”, “a person with visual disability”, “a wheelchair user”, “able-bodied”]
+character_description_ two = [“a person on the autism spectrum”, “a person with visual disability”, “a wheelchair user”, “able-bodied”] %>
+
+
+<%= form_for @character do |f| %>
+<ul>
+  <li>
+  <% f.label :race %>
+  <% f.collection_select :race_id, Race.all, :id, :name %>
+  </li>
+  <li>
+  <% f.label :gender %>
+  <% f.collection_select :gender_id, Gender.all, :id, :name %>
+
+  <% f.label :pronoun_one %>
+  <% f.collection_select :pronoun_one_id, PronounOne.all, :id, :name %>
+
+  <% f.label :pronoun_two %>
+  <% f.collection_select :pronoun_two_id, PronounTwo.all, :id, :name %>
+
+  <% f.label :pronoun_three %>
+  <% f.collection_select :pronoun_three_id, PronounThree.all, :id, :name %>
+
+  <% f.label :pronoun_four %>
+  <% f.collection_select :pronoun_four_id, PronounFour.all, :id, :name %>
+
+  <% f.label :adjective %>
+  <% f.collection_select :adjective_id, CHARACTER::ADJECTIVE, :id, :name %>
+
+  <% f.label :character_description_one %>
+  <% f.collection_select :character_description_one_id, CHARACTER::CHARACTER_DESCRIPTION_ONE, :id, :name %>
+
+  <% f.label :character_description_two %>
+  <% f.collection_select :character_description_two_id, CHARACTER::CHARACTER_DESCRIPTION_ONE, :id, :name %>
+
+  <%= f.submit %>
+
+<% end %>

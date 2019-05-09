@@ -8,4 +8,5 @@ class User < ApplicationRecord
   validates :password, presence: true, length: {minimum: 6, maximum: 20}
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP },  length: {maximum: 75}
 
+  # POTATO = ["foo", "bar", "baz"]
 end
