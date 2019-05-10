@@ -16,37 +16,37 @@
 
 <%= form_for @character do |f| %>
 
-<%= f.label :name %>
+<%= f.label :name, "Character's name:"  %>
 <%= f.text_field :name %> <br>
 
-<%= f.label :gender_id %>
-<%= f.collection_select :gender_id, Gender.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
+<%= f.label :gender_id, "Character's gender:" %>
+<%= f.collection_select :gender_id, Gender.order(:name).all, :id, :name, :prompt => '~please select~'  %><br>
 
-<%= f.label :pronoun_one_id %>
+<%= f.label :pronoun_one_id, "Character's pronoun ('___ is happy.'):" %>
 <%= f.collection_select :pronoun_one_id, PronounOne.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
 
-<%= f.label :pronoun_two_id %>
+<%= f.label :pronoun_two_id, "Character's pronoun ('This person did it all by ____.'):"  %>
 <%= f.collection_select :pronoun_two_id, PronounTwo.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
 
-<%= f.label :pronoun_three_id %>
+<%= f.label :pronoun_three_id, "Character's pronoun ('This is ___ painting.'):" %>
 <%= f.collection_select :pronoun_three_id, PronounThree.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
 
-<%= f.label :pronoun_four_id %>
+<%= f.label :pronoun_four_id, "Character's pronoun ('I'm meething ___ now.'):" %>
 <%= f.collection_select :pronoun_four_id, PronounFour.order(:name).all,:id, :name, :prompt => '~please select~' %><br>
 
-<%= f.label :race_id %>
+<%= f.label :race_id, "Character's race:" %>
 <%= f.collection_select :race_id, Race.order(:name).all,:id, :name, :prompt => '~please select~' %><br>
 
-<%= f.label :ethnicity_id %>
+<%= f.label :ethnicity_id, "Character's ethnicity:"  %>
 <%= f.collection_select :ethnicity_id, Ethnicity.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
 
-<%= f.label :adjective %>
+<%= f.label :adjective, "What adjective describes the character best?" %>
 <%= f.select :adjective, Character::ADJECTIVES, :prompt => '~please select~' %><br>
 
-<%= f.label :character_description_one %>
+<%= f.label :character_description_one, "Yesterday, the character..." %>
 <%= f.select :character_description_one, Character::CHARACTER_DESCRIPTION_ONE, :prompt => '~please select~' %><br>
 
-<%= f.label :character_description_two %>
+<%= f.label :character_description_two, "What is character's level of ability?" %>
 <%= f.select :character_description_two, Character::CHARACTER_DESCRIPTION_TWO, :prompt => '~please select~' %><br><br>
 
 <%= f.submit 'My character is ready!', :style => "color: #0E2B3F; font-size: 20pt; border: 2px solid; background-color: lightgreen; padding: 15px 20px; border-radius: 20px;"%><br>

@@ -4,12 +4,14 @@
 <br>
 
 <% if @logged_in_user.story_books.first == nil %>
-<p>You haven't created any story yet. Time to change that!</p>
+<p>You haven't created any story yet... Time to change that!</p>
+<%= button_to "Create a new story!", new_character_path, method: :get, form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px; margin: 2px 2px 2px 2px;" %>
+<br><br>
 <% else %>
 <h2> Here is the list of your stories: </h2><br>
 
 <ul>
-  <% @logged_in_user.story_books.each do |story_book| %>
+  <% @logged_in_user.story_books.sort_by{|sb| sb.created_at}.reverse.each do |story_book| %>
     <li>
       <%= link_to story_book.tag.titleize, story_book%> featuring <%=story_book.character.name.titleize %>, a <%=story_book.character.adjective %> <%=story_book.character.gender.name %> who <%=story_book.character.character_description_one %><br>
       <%= button_to "Edit the character", edit_character_path(story_book.character_id), :method => :get, :style => "color: #0E2B3F; font-size: 13pt; border: 2px solid; background-color: #25c2c0; padding: 5px 10px; display: inline; border-radius: 20px;", form: {style: 'display:inline-block;'} %>
@@ -22,7 +24,7 @@
 
 <h2>Check out stories by others:</h2><br>
 <ul>
-<% StoryBook.all.each do |story_book|%>
+<% StoryBook.all.select{|sb| sb.user != @logged_in_user}.sample(4).each do |story_book|%>
 <li> <%= link_to story_book.tag.titleize, story_book%>, a story about <%=story_book.story.issue.upcase %></li><br>
 <% end %>
 </ul>

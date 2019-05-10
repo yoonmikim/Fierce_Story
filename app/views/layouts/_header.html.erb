@@ -1,30 +1,30 @@
 <div id="header">
 
 <% if @logged_in_user %>
-<%= button_to "Hi #{@logged_in_user.username.titleize}!", story_books_path, method: :get, form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px;" %>
-<%= button_to "Log out", log_out_path, method: :delete, form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px;" %>
-<%= button_to "Create a new story!", new_character_path, method: :get, form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px;" %>
+<%= button_to "Hi #{@logged_in_user.username.titleize}!", story_books_path, method: :get, form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px; margin: 2px 2px 2px 2px;" %>
+<%= button_to "Log out", log_out_path, method: :delete, form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px; margin: 2px 2px 2px 2px;" %>
+<%= button_to "Create a new story!", new_character_path, method: :get, form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px; margin: 2px 2px 2px 2px;" %>
 <% end %>
 
 <% if cookies[:moon] %>
-<%= button_to 'Light Mode', sun_path, method: :get, class: 'header-button', form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px;" %>
+<%= button_to 'Light Mode', sun_path, method: :get, class: 'header-button', form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px; margin: 2px 2px 2px 2px;" %>
 <% else %>
-<%= button_to 'Dark Mode', moon_path, method: :get, class: 'header-button', form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px;" %>
+<%= button_to 'Dark Mode', moon_path, method: :get, class: 'header-button', form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px; margin: 2px 2px 2px 2px;" %>
 <% end %>
 
 <% if cookies[:bigletters] %>
-<%= button_to 'Text Size Down', standardletters_path, method: :get, class: 'header-button', form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px;" %>
+<%= button_to 'Text Size Down', standardletters_path, method: :get, class: 'header-button', form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px; margin: 2px 2px 2px 2px;" %>
 <% else %>
-<%= button_to 'Text Size Up', bigletters_path, method: :get, class: 'header-button', form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px;" %>
+<%= button_to 'Text Size Up', bigletters_path, method: :get, class: 'header-button', form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px; margin: 2px 2px 2px 2px;" %>
 <% end %>
 
 <% if cookies[:broadmargins] %>
-<%= button_to 'Margins Down', standardmargins_path, method: :get, class: 'header-button', form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px;" %>
+<%= button_to 'Margins Down', standardmargins_path, method: :get, class: 'header-button', form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px; margin: 2px 2px 2px 2px;" %>
 <% else %>
-<%= button_to 'Margins Up', broadmargins_path, method: :get, class: 'header-button', form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px;" %>
+<%= button_to 'Margins Up', broadmargins_path, method: :get, class: 'header-button', form: {style: 'display:inline-block;'}, :style => "font-family: 'Cupertino'; text-align: center; color: #0E2B3F; font-size: 20pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px; margin: 2px 2px 2px 2px;" %>
 <% end %> <br>
 
-
+<br>
 <br>
 </div>
 <hr>
