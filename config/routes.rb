@@ -8,8 +8,15 @@ Rails.application.routes.draw do
   resources :genders, only: [:new, :create]
   get 'welcome/index'
   root 'welcome#index'
+  # get '/new', to: 'characters#new', as: 'new_character'
+  # get '/edit', to: 'characters#edit', as: 'edit_character'
   resources :characters, only: [:new, :create, :edit, :update]
   # resources :stories
+  # get '/home', to: 'story_books#index', as: 'story_books'
+  # get '/home', to: 'story_books#create', action: 'post', as: 'story_books_post'
+  # get '/read', to: 'story_books#show', as: 'story_book'
+  # get '/new_story', to: 'story_books#new', as: 'new_story_book'
+  # get '/edit', to: 'story_books#edit', as: 'edit_story_book'
   resources :story_books
   resources :users
   resources :login, only: [:new, :create]
