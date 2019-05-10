@@ -1,10 +1,10 @@
 <br><br>
 
 <div id="story">
-  <%= image_tag("arrow.png", :width=>40, :height=>30, :onclick => story_books_path, :class => "functional-button", :alt => "Go back")%>
-  <%= image_tag("print.png", :width=>40, :height=>30, :onclick => 'window.print();return false;', :class => "functional-button", :alt => "Print") %>
-  <%= image_tag("facebook.png", :width=>40, :height=>30, :onclick => "location.href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparse.com'", :class => "functional-button", :alt => "Share on Facebook") %>
-  <%= image_tag("twitter.svg", :width=>40, :height=>30, :onclick => "location.href='https://twitter.com/share?ref_src=twsrc%5Etfw'", :class => "functional-button", :alt => "Share on Twitter") %>
+  <%= image_tag("arrow.png", :width=>40, :height=>30, :onclick => "location.href='/story_books'", :class => "functional-button", :alt => "Go back", :style => "background-color: #c0c4c7; padding: 7px 12px; text-align: center; border-radius: 20px;")%>
+  <%= image_tag("print.png", :width=>40, :height=>30, :onclick => 'window.print();return false;', :class => "functional-button", :alt => "Print", :style => "background-color: #c0c4c7; padding: 7px 12px; text-align: center; border-radius: 20px;") %>
+  <%= image_tag("facebook.png", :width=>40, :height=>30, :onclick => "location.href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparse.com'", :class => "functional-button", :alt => "Share on Facebook", :style => "background-color: #c0c4c7; padding: 7px 12px; text-align: center; border-radius: 20px;") %>
+  <%= image_tag("twitter.svg", :width=>40, :height=>30, :onclick => "location.href='https://twitter.com/share?ref_src=twsrc%5Etfw'", :class => "functional-button", :alt => "Share on Twitter", :style => "background-color: #c0c4c7; padding: 7px 12px; text-align: center; border-radius: 20px;") %>
 
     <h1><%= @story_book.tag.titleize %></h1>
 

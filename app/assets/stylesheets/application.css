@@ -282,6 +282,11 @@ text-decoration: underline;
   margin: 0 auto;
 }
 
+#story img {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  }
+
 #story h1 {
     font-family: 'Cupertino';
     text-align: left;

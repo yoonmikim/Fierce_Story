@@ -1,3 +1,645 @@
 * {
-  background-color: black;
+  background-color: #222324;
+}
+
+@font-face {
+  font-family: 'Cupertino';
+  src: url('/assets/Cupertino.ttf');
+}
+
+@font-face {
+  font-family: 'Valentina-Regular';
+  src: url('/assets/Valentina-Regular.otf');
+}
+
+#welcome {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  text-decoration: none;
+  font-style: normal;
+}
+
+#welcome {
+  font-family: 'Cupertino';
+  text-align: left;
+  text-decoration: none;
+  font-style: normal;
+  color: #f57d7d;
+}
+
+#welcome p {
+  font-family: 'Valentina-Regular';
+  text-align: left;
+  text-decoration: none;
+  font-style: normal;
+  color: #BCD5CF;
+  font-size: 20pt;
+}
+
+#welcome h1 {
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 140pt;
+}
+
+#welcome h2 {
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+        color: #BCD5CF;
+    font-size: 60pt;
+}
+
+#welcome a {
+    font-family: 'Cupertino';
+    text-align: center;
+    text-decoration: none;
+    font-style: normal;
+    color: #0E2B3F;
+    font-size: 20pt;
+    background-color: lightgreen;
+    padding: 7px 12px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 20px;
+    }
+
+#welcome a:visited {
+  font-family: 'Cupertino';
+  text-align: center;
+  text-decoration: none;
+  font-style: normal;
+  color: #0E2B3F;
+  font-size: 20pt;
+  background-color: lightgreen;
+  padding: 7px 12px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 20px;
+    }
+
+#welcome a:hover {
+color: #f57d7d;
+text-decoration: underline;
+}
+
+#welcome a:active {
+color: blue;
+text-decoration: underline;
+}
+
+#welcome input {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 20pt;
+    color: #BCD5CF;
+}
+
+#standard_page {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#standard_page h1 {
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 140pt;
+}
+
+#standard_page h2 {
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+        color: #BCD5CF;
+    font-size: 60pt;
+}
+
+#standard_page p {
+    display: block;
+    /* margin-block-start: 0.4em;
+    margin-block-end: 0.4em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#standard_page label {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#standard_page input {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 20pt;
+}
+
+#standard_page a:link {
+  font-family: 'Valentina-Regular';
+  text-align: center;
+  text-decoration: none;
+  font-style: normal;
+  color: #0E2B3F;
+  font-size: 20pt;
+  border: 2px black solid;
+  background-color: lightgreen;
+  padding: 14px 25px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+#standard_page a:visited {
+  font-family: 'Valentina-Regular';
+  text-decoration: none;
+  color: #58B99D;
+}
+
+#standard_page a:hover {
+  color: #f57d7d;
+  text-decoration: underline;
+}
+
+#standard_page a:active {
+  color: blue;
+  text-decoration: underline;
+}
+
+#homepage {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#homepage h1 {
+    font-family: 'Cupertino';
+    text-align: left;
+    text-decoration: none;
+    font-style: normal;
+    color: #f57d7d;
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 110pt;
+}
+
+#homepage h2 {
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: none;
+        color: #BCD5CF;
+    font-size: 30pt;
+}
+
+#homepage p {
+    display: block;
+    /* margin-block-start: 0.4em;
+    margin-block-end: 0.4em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#homepage li {
+    display: block;
+    /* margin-block-start: 0.4em;
+    margin-block-end: 0.4em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: none;
+        color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#homepage label {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+        color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#homepage input {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 20pt;
+}
+
+#homepage a:link {
+  font-family: 'Cupertino';
+  text-align: center;
+  text-decoration: none;
+  font-style: normal;
+  color: #0E2B3F;
+  font-size: 20pt;
+  background-color: lightgreen;
+  padding: 7px 12px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+#homepage a:visited {
+  font-family: 'Cupertino';
+  text-decoration: none;
+  color: #0E2B3F;
+}
+
+#homepage a:hover {
+  color: #f57d7d;
+  text-decoration: underline;
+}
+
+#homepage a:active {
+  color: blue;
+  text-decoration: underline;
+}
+
+#story {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#story h1 {
+    font-family: 'Cupertino';
+    text-align: left;
+    text-decoration: none;
+    font-style: normal;
+    color: #f57d7d;
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 110pt;
+}
+
+#story h2 {
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: none;
+        color: #BCD5CF;
+    font-size: 30pt;
+}
+
+#story p {
+    display: block;
+    /* margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+    font-weight: none;
+    color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#story li {
+    display: block;
+    /* margin-block-start: 0.4em;
+    margin-block-end: 0.4em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: none;
+        color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#story label {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+        color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#story input {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 20pt;
+}
+
+#story a:link {
+  font-family: 'Cupertino';
+  text-align: center;
+  text-decoration: none;
+  font-style: normal;
+  color: #0E2B3F;
+  font-size: 20pt;
+  background-color: lightgreen;
+  padding: 7px 12px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+#story a:visited {
+  font-family: 'Cupertino';
+  text-decoration: none;
+  color: #0E2B3F;
+}
+
+#story a:hover {
+  color: #f57d7d;
+  text-decoration: underline;
+}
+
+#story a:active {
+  color: blue;
+  text-decoration: underline;
+}
+
+
+#form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#form h1 {
+    font-family: 'Cupertino';
+    text-align: left;
+    text-decoration: none;
+    font-style: normal;
+    color: #BCD5CF;
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 80pt;
+}
+
+#form h2 {
+      font-family: 'Cupertino';
+      display: block;
+      margin-block-start: 0.4em;
+      margin-block-end: 0.4em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+          color: #BCD5CF;
+      font-size: 60pt;
+}
+
+#form p {
+    display: block;
+    /* margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+    font-weight: none;
+    color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#form li {
+    background: #B0D8C3;
+    display: block;
+    width: 45%;
+    /* margin-block-start: 0.4em;
+    margin-block-end: 0.4em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: none;
+        color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#form label {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+            color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#form select {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+        color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#form input {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 20pt;
+    color: #BCD5CF;
+}
+
+#form a:link {
+  font-family: 'Cupertino';
+  text-align: center;
+  text-decoration: none;
+  font-style: normal;
+  color: #0E2B3F;
+  font-size: 20pt;
+  background-color: lightgreen;
+  padding: 7px 12px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+#form a:visited {
+  font-family: 'Cupertino';
+  text-decoration: none;
+  color: #0E2B3F;
+}
+
+#form a:hover {
+  color: #f57d7d;
+  text-decoration: underline;
+}
+
+#form a:active {
+  color: blue;
+  text-decoration: underline;
+}
+
+#header input {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 20pt;
+}
+
+
+#header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+#header h1 {
+    font-family: 'Cupertino';
+    text-align: left;
+    text-decoration: none;
+    font-style: normal;
+    color: #f57d7d;
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 110pt;
+}
+
+#header h2 {
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: none;
+        color: #BCD5CF;
+    font-size: 30pt;
+}
+
+#header p {
+    display: block;
+    /* margin-block-start: 0.4em;
+    margin-block-end: 0.4em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#header li {
+    display: block;
+    /* margin-block-start: 0.4em;
+    margin-block-end: 0.4em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: none;
+        color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#header label {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+        color: #BCD5CF;
+    font-size: 20pt;
+}
+
+#header input {
+    font-family: 'Valentina-Regular';
+    display: block;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 20pt;
+}
+
+#header a:link {
+  font-family: 'Cupertino';
+  text-align: center;
+  text-decoration: none;
+  font-style: normal;
+  color: #0E2B3F;
+  font-size: 20pt;
+  background-color: lightgreen;
+  padding: 7px 12px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+
+
+#header a:visited {
+  font-family: 'Cupertino';
+  text-decoration: none;
+  color: #0E2B3F;
+}
+
+#header a:hover {
+  color: #f57d7d;
+  text-decoration: underline;
+}
+
+#header a:active {
+  color: blue;
+  text-decoration: underline;
 }

@@ -6,14 +6,15 @@
     <%= csp_meta_tag %>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/d/d6/Official_Logo_OneLove.png">
 
+    <% if cookies[:moon] %>
+    <%= stylesheet_link_tag 'application_dark', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <% else %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <% end %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <% if cookies[:moon] %>
-    <link rel='stylesheet' href='../assets/stylesheets/application_dark.css'>
-    <% end %>
 
     <header>
       <%= render 'layouts/header' %>
