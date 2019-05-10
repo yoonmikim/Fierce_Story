@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FierceStories</title>
+    <title> ✨ Fierce Stories ✨ Changing the world one story at a time  ✨ </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/d/d6/Official_Logo_OneLove.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <% if cookies[:moon] %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <!-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css'> -->
+    <!-- <link href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" rel="stylesheet"></link> -->
+
+
+    <% end %>
+
     <header>
       <% if @notification %>
         <p class="message">
           <%= @notification %>
         </p>
       <% end %>
+
+      <% if cookies[:moon] %>
+      <%= button_to '🌞 Light Mode 🌞 ', sun_path, method: :get, class: 'header-button' %>
+      <% else %>
+      <%= button_to '🌛 Dark Mode 🌛', moon_path, method: :get, class: 'header-button' %>
+      <% end %>
+
+      <% if cookies[:bigletters] %>
+      <%= button_to '🔡 standard text size 🔡 ', standardletters_path, method: :get, class: 'header-button' %>
+      <% else %>
+      <%= button_to '🔠 INCREASE TEXT SIZE 🔠', bigletters_path, method: :get, class: 'header-button' %>
+      <% end %>
+
+      <% if cookies[:broadmargins] %>
+      <%= button_to '🆗 standard margins 🆗 ', standardmargins_path, method: :get, class: 'header-button' %>
+      <% else %>
+      <%= button_to '↕️ INCREASE MARGINS ↕️', broadmargins_path, method: :get, class: 'header-button' %>
+      <% end %> <br>
 
     </header>
     <%= yield %>

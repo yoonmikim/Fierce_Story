@@ -1,32 +1,61 @@
-.welcome {
-  font-size: 150px;
-
-}
-
-@import "semantic-ui";
 
 @font-face {
   font-family: 'Cupertino';
   src: url('/assets/Cupertino.ttf');
 }
 
-body {
-  text-align: left;
-}
-
-
-h1 {
-  font-family: 'Cupertino';
-  text-align: left;
-}
-
-
 @font-face {
   font-family: 'Valentina-Regular';
   src: url('/assets/Valentina-Regular.otf');
 }
 
-ul {
+$dark-color: #111;
+$light-color: #eee;
+
+body.dark-mode {
+  background-color: $dark-color;
+  color: $light-color;
+  a {
+    color: $dark-color;
+  }
+  button {
+    background-color: $light-color;
+    color: $dark-color;
+  }
+}
+
+body.light-mode {
+  background-color: $light-color;
+  color: $dark-color;
+  a {
+    color: $dark-color;
+  }
+  button {
+    background-color: $dark-color;
+    color: $light-color;
+  }
+}
+
+.welcome {
+  font-family: 'Cupertino';
+  text-align: left;
+  text-decoration: none;
+  font-style: normal;
+}
+
+
+body {
+  font-family: 'Valentina-Regular';
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'Cupertino';
+  font-style: normal;
+  text-size: 100px;
+}
+
+/* ul {
 
     list-style-type: none;
     padding: 25px;
@@ -58,7 +87,7 @@ li {
 @import url(https://fonts.googleapis.com/css?family=Advent+Pro:100);
 
 html {
-  background:  url(https://i.pinimg.com/originals/25/b4/22/25b422f0a9dbbe5373d0ab13affa6a35.gif) no-repeat center center fixed;
+  /* background:  url(https://i.pinimg.com/originals/25/b4/22/25b422f0a9dbbe5373d0ab13affa6a35.gif) no-repeat center center fixed; */
   background-size: cover;
 }
 
@@ -74,7 +103,7 @@ body {
 .functional-button {
 background :purple;
 margin: 50px;
-display: block;
+display: inline;
 padding: 20px;
 color: white;
 border-radius: 20px; <<- rounded courners
@@ -145,7 +174,7 @@ box-shadow: 0 0 0 red;
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   align-content: flex-start;
-}
+} */
 
 /* #signup {
   font-family: 'Valentina-Regular';

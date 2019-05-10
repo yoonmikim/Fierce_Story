@@ -7,13 +7,11 @@
    <% end %>
 <br>
 
-<%= button_to "Print!", @story_book, :onclick => 'window.print();return false;'%><br>
-<%= image_tag("print.png", :width=>40, :height=>30, :onclick => 'window.print();return false;', :class => "functional-button", :alt => "Print") %><br>
-<%= image_tag("facebook.png", :width=>40, :height=>30, :onclick => "location.href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparse.com'", :class => "functional-button", :alt => "Share on Facebook") %><br>
-<%= image_tag("twitter.svg", :width=>40, :height=>30, :onclick => "location.href='https://twitter.com/share?ref_src=twsrc%5Etfw'", :class => "functional-button", :alt => "Share on Twitter") %><br>
-
+<%= image_tag("print.png", :width=>40, :height=>30, :onclick => 'window.print();return false;', :class => "functional-button", :alt => "Print") %>
+<%= image_tag("facebook.png", :width=>40, :height=>30, :onclick => "location.href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparse.com'", :class => "functional-button", :alt => "Share on Facebook") %>
+<%= image_tag("twitter.svg", :width=>40, :height=>30, :onclick => "location.href='https://twitter.com/share?ref_src=twsrc%5Etfw'", :class => "functional-button", :alt => "Share on Twitter") %>
 
 
 <!-- .split(". ").map(&:capitalize).join(". ") -->
---------------------------------------------------------------------- <br>
-This is a "revised" inclusive version of "<%= @logged_in_user.story_books.last.story.title %>" by <%= @logged_in_user.story_books.last.story.author %> (<%= link_to "Read the original story", @logged_in_user.story_books.last.story.url %>)
+<hr>
+<p>This is a "revised" inclusive version of "<%= @story_book.story.title %>" by <%= @story_book.story.author %> (<%= link_to "Read the original story", @story_book.story.url %>)</p>
