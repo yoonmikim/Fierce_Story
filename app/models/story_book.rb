@@ -15,5 +15,4 @@ class StoryBook < ApplicationRecord
   validates :story_id, presence: true
   validates :character_id, presence: true
 
-
 end

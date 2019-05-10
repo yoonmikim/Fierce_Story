@@ -15,6 +15,7 @@ class CharactersController < ApplicationController
         @character.save
         redirect_to new_story_book_path(character: @character)
       else
+        @errors = @character.errors.full_messages
         render :new
       end
   end

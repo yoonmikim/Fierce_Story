@@ -26,8 +26,9 @@
 <%= f.label :tag, "How would you like to entitle your story?" %>
 <%= f.text_field :tag %> <br>
 
-<p><%= f.label :comment, :style => "display: inline" %> (just for yourself):</p>
-<%= f.text_field :comment %><br><br>
+<%= f.label :comment, " Comment (just for yourself):", :style => "display: inline"%>
+<%= f.text_field :comment %>
+<br><br>
 
 <%= f.submit 'Read your story!', :style => "color: #0E2B3F; font-size: 20pt; border: 2px solid; background-color: lightgreen; padding: 15px 20px; border-radius: 20px;"%><br>
 
