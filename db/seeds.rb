@@ -1,10 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Race.destroy_all
+Gender.destroy_all
+PronounOne.destroy_all
+PronounTwo.destroy_all
+PronounThree.destroy_all
+PronounFour.destroy_all
+Story.destroy_all
+Character.destroy_all
+StoryBook.destroy_all
 
 Race.create(name: "Asian")
 Race.create(name: "Biracial")
@@ -13,11 +16,8 @@ Race.create(name: "Hispanic")
 Race.create(name: "Latino")
 Race.create(name: "Native American")
 Race.create(name: "White")
-
-Ethnicity.create(name: "Arab")
-Ethnicity.create(name: "Jewish")
-Ethnicity.create(name: "Asian")
-Ethnicity.create(name: "Slavic")
+Race.create(name: "Arab")
+Race.create(name: "Jewish")
 
 Gender.create(name: "boy")
 Gender.create(name: "gender non-conforming person")
@@ -25,7 +25,6 @@ girl = Gender.create(name: "girl")
 Gender.create(name: "non-binary person")
 Gender.create(name: "transboy")
 Gender.create(name: "transgirl")
-
 
 PronounOne.create(name: "he")
 she = PronounOne.create(name: "she")
@@ -53,16 +52,15 @@ PronounFour.create(name: "zir")
 user1 = User.create!(name: "SYLWIA", username: "sylwia", password: "sylwia", email: "sylwia@gmail.com")
 user1 = User.create!(name: "Joel", username: "jo", password: "123456", email: "jo@gmail.com")
 
-char = Character.create!(name: "Bo", gender_id: 1, adjective: "feminist", character_description_one: "appreciated nature", character_description_two: "a wheelchair user", pronoun_one_id: 1, pronoun_two_id: 1, pronoun_three_id: 3, pronoun_four_id: 2, race_id: 4, ethnicity_id: 1)
-char2 = Character.create!(name: "Faren", gender_id: 4, race_id: 3, pronoun_one_id: 3, pronoun_two_id: 4, pronoun_three_id: 5, pronoun_four_id: 4, adjective: "kind", character_description_one: "loved reading books", character_description_two: "a wheelchair user", ethnicity_id: 3)
-char3 = Character.create!(name: "Dak", gender_id: 3, race_id: 1, pronoun_one_id: 2, pronoun_two_id: 2, pronoun_three_id: 1, pronoun_four_id: 2, adjective: "strong", character_description_one: "appreciated nature", character_description_two: "a person with visual disability", ethnicity_id: 2)
-char4 = Character.create!(name: "Rotem", gender_id: 6, race_id: 5, pronoun_one_id: 2, pronoun_two_id: 2, pronoun_three_id: 1, pronoun_four_id: 1, adjective: "brave", character_description_one: "was interested in astronomy", character_description_two: "able-bodied", ethnicity_id: 4)
+char = Character.create!(name: "Bo", gender_id: 1, adjective: "feminist", character_description_one: "appreciated nature", character_description_two: "a wheelchair user", pronoun_one_id: 1, pronoun_two_id: 1, pronoun_three_id: 3, pronoun_four_id: 2, race_id: 4)
+char2 = Character.create!(name: "Faren", gender_id: 4, race_id: 3, pronoun_one_id: 3, pronoun_two_id: 4, pronoun_three_id: 5, pronoun_four_id: 4, adjective: "kind", character_description_one: "loved reading books", character_description_two: "a wheelchair user")
+char3 = Character.create!(name: "Dak", gender_id: 3, race_id: 1, pronoun_one_id: 2, pronoun_two_id: 2, pronoun_three_id: 1, pronoun_four_id: 2, adjective: "strong", character_description_one: "appreciated nature", character_description_two: "a person with visual disability")
+char4 = Character.create!(name: "Rotem", gender_id: 6, race_id: 5, pronoun_one_id: 2, pronoun_two_id: 2, pronoun_three_id: 1, pronoun_four_id: 1, adjective: "brave", character_description_one: "was interested in astronomy", character_description_two: "able-bodied")
 
 
 story1 = Story.create!(title: "The Story of Yes and No", author: "Daniel Errico", url: "http://archive.org/stream/freechildrenstor29762gut/29762.txt", content: "Before words were words, a +gender+ named Yes lived in a small village in a small Queendom. There was nothing out of ordinary about Yes. Yes was +character_description_two+ and +pronoun_one+ +character_description_one+. Yes spent a lot of time with +pronoun_three+ loving parents and sibling.@@
 Yes was +adjective+ and good at everything. +pronoun_one+ was the best, smartest and most liked person in +pronoun_two+ village. Yes had a sibling whose name was No. No was not much good at anything, which made No jealous of Yes.@@
-Whenever the villagers asked No for help, No refused because No didn't like people very much. Whenever someone asked Yes for a favor, +pronoun_one+ would gladly help, and +pronoun_one+ secretly didn't mind the fact that it irritated No when +pronoun_one+ did.@@
-One day Yes and No's parent, Okay, went on a long journey and left the two children in charge of all the animals. Yes took good care of the great guck, and the icks, and the three-toed yock. [Keep in mind, my dear friend, that the guck, ick, and three-toed yock were ancient animals, so you might know them by different names today.]@@
+Whenever the villagers asked No for help, No refused because No didn't like people very much. Whenever someone asked Yes for a favor, +pronoun_one+ would gladly help, and +pronoun_one+ secretly didn't mind the fact that it irritated No when +pronoun_one+ did.@@ One day Yes and No's parent, Okay, went on a long journey and left the two children in charge of all the animals. Yes took good care of the great guck, and the icks, and the three-toed yock. [Keep in mind, my dear friend, that the guck, ick, and three-toed yock were ancient animals, so you might know them by different names today.]@@
 No didn't want to be bothered with the boring tasks involved with taking care of the animals. So instead of helping Yes, No went down to the lake and threw rocks into the water.@@
 A few days after their parent left, Yes asked No to watch the three-toed yock while +pronoun_one+ went to find some food to eat. Instead of doing what Yes had asked, No laid down and forgot about the yock.@@
 It just so happened that their Queen had a royal road nearby, and traveled on it often with her wife. So often, that when the three-toed yock wandered onto the road, the Queen's carriage was passing by and had to swerve to avoid hitting it. The Queen was thrown from the carriage, fell to the ground, and was badly injured.@@
@@ -95,14 +93,14 @@ story4 = Story.create!(title: "Damsel in a Dress", author: "Daniel Errico", url:
 There once lived a brave princess who was always saving knights. The princess was like any other +race+ +gender+. +pronoun_three+ name was +name+. +pronoun_one+ was +adjective+. +pronoun_one+ +character_description_one+. @@ One day +pronoun_one+ rode by a tower with a poor scared king inside and a hungry dragon nearby. The princess spoke to the dragon and convinced it to leave and try some plants instead. Afterwards, +pronoun_one+ burst through the tower door and found the knight. Day like any other.@@'I am here to save you!' said the brave +gender+.@@'I can’t believe it! When I was a child, my parents used to say that it’s only knights who can save kingdoms' said the king, looking surprised.@@ 'Well, they were wrong, of course,' said the brave princess.@@ The brave princess left and thought about checking on the dragon. Were the plants a good meal? What plants did it choose? Maybe the old oak? The dragon was already miles away because dragons fly quickly when hungry. It took +name+ days to find the dragon who was resting in a cave.@@ The dragon was having such a wonderful dream that fire came shooting out of his nose. (You see, dragons breathe fire when they are scared and angry, but also when they are very happy.) The fire made the +adjective+ princess feel like at a fireside in the forest. +gender+ waited for the dragon to wake up.@@ 'I came to check on how you are doing. How is the plant diet treating you?,' said +name+ to the dragon.@@ 'Oh, fantastic! I love the oaks and pine trees especially,' said the dragon.@@ 'It’s lunch time already,' said the princess to the dragon, 'Should we eat together?'.@@ The dragon agreed and they left the cave to have a lovely lunch of berries and bushes.@@ The dragon who was now so happy that fire shot out of its nose again. The dragon felt much better knowing that it can now be friends with people and casually eat together. The princess, on the other hand, was happy that the dragon was not a bad creature - just grumpy when hungry, like we all.", issue: "Equality")
 
 
-story_book_one = StoryBook.create!(tag: "Are these your things?", comment: "oh yes", user_id:1, story_id:2, character_id: 1)
-story_book_two = StoryBook.create!(tag: "Dragon who ate plants", comment: "yes", user_id: 1, story_id: 4, character_id: 4)
-story_book_seven = StoryBook.create!(tag: "The Best Story", comment: "oh yes", user_id:1, story_id:3, character_id: 2)
-story_book_eight = StoryBook.create!(tag: "Welcome, Dak!", comment: "oh yes", user_id:1, story_id:2, character_id: 3)
+story_book_one = StoryBook.create!(tag: "Are these your things?", user_id:1, story_id:2, character_id: 1)
+story_book_two = StoryBook.create!(tag: "Dragon who ate plants", user_id: 1, story_id: 4, character_id: 4)
+story_book_seven = StoryBook.create!(tag: "The Best Story", user_id:1, story_id:3, character_id: 2)
+story_book_eight = StoryBook.create!(tag: "Welcome, Dak!", user_id:1, story_id:2, character_id: 3)
 
-story_book_three = StoryBook.create!(tag: "A Story of Yes and no", comment: "oh yes", user_id:2, story_id:1, character_id: 1)
-story_book_four = StoryBook.create!(tag: "Are your toys alive?", comment: "oh yes", user_id:2, story_id:2, character_id: 4)
-story_book_five = StoryBook.create!(tag: "You belong here", comment: "oh yes", user_id:2, story_id:3, character_id: 2)
-story_book_six = StoryBook.create!(tag: "Who's grumpy today?", comment: "oh yes", user_id:2, story_id:4, character_id: 1)
+story_book_three = StoryBook.create!(tag: "A Story of Yes and no", user_id:2, story_id:1, character_id: 1)
+story_book_four = StoryBook.create!(tag: "Are your toys alive?", user_id:2, story_id:2, character_id: 4)
+story_book_five = StoryBook.create!(tag: "You belong here", user_id:2, story_id:3, character_id: 2)
+story_book_six = StoryBook.create!(tag: "Who's grumpy today?", user_id:2, story_id:4, character_id: 1)
 
 # User.all.first.story_books.first.story.character

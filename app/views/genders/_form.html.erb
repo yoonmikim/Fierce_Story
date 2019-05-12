@@ -1,0 +1,25 @@
+<div id="form">
+<h1>Help us be<br>more inclusive</h1>
+<br><br>
+
+<% if @errors && @errors.any? %>
+<ul class="errors"> <p>
+<strong>Oh-oh! Fix these errors to move on:</strong>
+</p>
+<% @errors.each do |error| %>
+<li>
+  <%= error %>
+</li>
+<% end %>
+</ul>
+<% end %> <br>
+
+<%= form_for @gender do |f| %>
+
+<%= f.label :name, "Gender expression:"  %><br>
+<%= f.text_field :name %> <br>
+
+<%= f.submit 'Done!', :style => "color: #0E2B3F; font-size: 20pt; border: 2px solid; background-color: lightgreen; padding: 8px 10px; border-radius: 20px;"%><br>
+
+<% end %>
+</div>

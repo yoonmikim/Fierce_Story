@@ -19,8 +19,9 @@
 <%= f.label :name, "Character's name:"  %>
 <%= f.text_field :name %> <br>
 
-<%= f.label :gender_id, "Character's gender:" %>
-<%= f.collection_select :gender_id, Gender.order(:name).all, :id, :name, :prompt => '~please select~'  %><br>
+<%= f.label :gender_id, "Character's gender:" %> <%= f.collection_select :gender_id, Gender.order(:name).all, :id, :name, :prompt => '~please select~', form: {style: 'display:inline-block;'}, style: "float: left;" %>
+<%= link_to "Wanna add a gender expression?", new_gender_path, method: :get, form: {style: 'display:inline-block;'}, :style => "font-family: 'Monaco'; color: #0E2B3F; font-size: 15pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px; margin: 2px 2px 2px 2px;" %>
+<br><br>
 
 <%= f.label :pronoun_one_id, "Character's pronoun ('___ is happy.'):" %>
 <%= f.collection_select :pronoun_one_id, PronounOne.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
@@ -34,11 +35,9 @@
 <%= f.label :pronoun_four_id, "Character's pronoun ('I'm meething ___ now.'):" %>
 <%= f.collection_select :pronoun_four_id, PronounFour.order(:name).all,:id, :name, :prompt => '~please select~' %><br>
 
-<%= f.label :race_id, "Character's race:" %>
-<%= f.collection_select :race_id, Race.order(:name).all,:id, :name, :prompt => '~please select~' %><br>
-
-<%= f.label :ethnicity_id, "Character's ethnicity:"  %>
-<%= f.collection_select :ethnicity_id, Ethnicity.order(:name).all, :id, :name, :prompt => '~please select~' %><br>
+<%= f.label :race_id, "Character's race or ethnicity:" %><%= f.collection_select :race_id, Race.order(:name).all,:id, :name, :prompt => '~please select~', form: {style: 'display:inline-block;'}, style: "float: left;" %>
+<%= link_to "Wanna add a new race or ethnicity?", new_race_path, method: :get, form: {style: 'display:inline-block;'}, :style => "font-family: 'Monaco'; color: #0E2B3F; font-size: 15pt; background-color: lightgreen; padding: 7px 12px; text-align: center; border-radius: 20px; margin: 2px 2px 2px 2px;" %>
+<br><br>
 
 <%= f.label :adjective, "What adjective describes the character best?" %>
 <%= f.select :adjective, Character::ADJECTIVES, :prompt => '~please select~' %><br>

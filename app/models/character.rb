@@ -1,6 +1,5 @@
 class Character < ApplicationRecord
   has_many :story_books
-  belongs_to :ethnicity
   belongs_to :gender
   belongs_to :pronoun_one
   belongs_to :pronoun_two
@@ -15,7 +14,6 @@ class Character < ApplicationRecord
   validates :pronoun_two_id, presence: true
   validates :pronoun_three_id, presence: true
   validates :pronoun_four_id, presence: true
-  validates :ethnicity_id, presence: true
   validates :race_id, presence: true
   validates :adjective, presence: true
   validates :character_description_one, presence: true
