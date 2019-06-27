@@ -1,3 +1,5 @@
+This is now deployed and can be accessed here : http://fierce-stories.herokuapp.com/
+
 # README
 
 This README would normally document whatever steps are necessary to get the
