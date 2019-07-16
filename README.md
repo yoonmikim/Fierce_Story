@@ -1,6 +1,9 @@
 This is now deployed and can be accessed here : http://fierce-stories.herokuapp.com/
 
-# README
+[![Fierce Stories](http://fierce-stories.herokuapp.com/)](http://fierce-stories.herokuapp.com/ "fierce stories")
+
+
+# Fierce Stories
 
  In order to make an open, inclusive, accessible community for children, this app lets children and their parents to create their own stories (just like Mad Libs) while learning about consent, responsibility, equality, and belonging. They can also print, share to social media, make it dark mode (Accessibility feature built with cookies and sessions along with custom pure CSS).
  
