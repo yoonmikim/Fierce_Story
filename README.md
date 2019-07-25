@@ -1,8 +1,6 @@
 This is now deployed and can be accessed here : http://fierce-stories.herokuapp.com/
 
-[![Fierce Stories](http://fierce-stories.herokuapp.com/)](http://fierce-stories.herokuapp.com/ "fierce stories")
-
-[Fierce Stories](http://fierce-stories.herokuapp.com/ "Fierce Stories")
+   [Fierce Stories](http://fierce-stories.herokuapp.com/ "Fierce Stories")
 
 # Fierce Stories
 
